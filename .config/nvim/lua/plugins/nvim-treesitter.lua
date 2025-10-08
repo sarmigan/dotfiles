@@ -14,6 +14,12 @@ return {
                 "markdown",
                 "markdown_inline",
                 "python",
+                "css",
+                "html",
+                "javascript",
+                "json",
+                "tsx",
+                "typescript"
             },
             highlight = {
                 enable = true,
