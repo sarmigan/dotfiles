@@ -36,6 +36,10 @@ mason_registry.update(function()
     if not mason_registry.is_installed("json-lsp") then
         mason_registry.get_package("json-lsp"):install()
     end
+
+    if not mason_registry.is_installed("tailwindcss-language-server") then
+        mason_registry.get_package("tailwindcss-language-server"):install()
+    end
 end)
 
 vim.lsp.enable("clangd")
@@ -47,6 +51,7 @@ vim.lsp.enable("cssls")
 vim.lsp.enable("html")
 vim.lsp.enable("vtsls")
 vim.lsp.enable("jsonls")
+vim.lsp.enable("tailwindcss")
 
 vim.lsp.config("lua_ls", {
     settings = {

@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>pf", "<cmd>Telescope find_files<CR>", {})
-vim.keymap.set("n", "<leader>ps", "<cmd>Telescope live_grep<CR>", {})
+vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", {})
+vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", {})
 
 vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', {})
 
