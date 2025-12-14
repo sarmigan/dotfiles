@@ -1,0 +1,27 @@
+sort=-time
+layer=overlay
+background-color=#131313a6
+width=300
+height=110
+border-size=2
+border-color=#ffffff59
+border-radius=11
+icons=1
+max-icon-size=64
+default-timeout=5000
+font=Noto Sans 11
+outer-margin=5,3
+
+[urgency=low]
+border-color=#ffffff59
+
+[urgency=normal]
+border-color=#ffffff59
+
+[urgency=high]
+border-color=#bf616a59
+default-timeout=0
+
+[category=mpd]
+default-timeout=2000
+group-by=category

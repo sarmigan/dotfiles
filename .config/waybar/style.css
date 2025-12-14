@@ -1,0 +1,42 @@
+* {
+  border: none;
+  border-radius: 5px;
+  font-family: "Noto Sans";
+  font-weight: bold;
+  font-size: 14px;
+  min-height: 21px;
+  box-shadow: none;
+}
+
+window#waybar {
+  background: rgba(0, 0, 0, 0);
+  padding: 3px 0px;
+  margin: 0px 0px;
+}
+
+.modules-left,
+.modules-right {
+  margin: 3px;
+  background: rgba(0, 0, 0, 0);
+}
+
+#workspaces button,
+#wireplumber,
+#clock,
+#tray {
+  color: rgba(255, 255, 255, 1);
+  background: rgba(19, 19, 19, 0.65);
+  margin: 3px 3px;
+  padding: 5px 11px;
+  border-radius: 18px;
+}
+
+#workspaces button {
+  opacity: 0.35;
+  min-width: 20px;
+  padding: 5px 7px;
+}
+
+#workspaces button.active {
+  opacity: 1;
+}

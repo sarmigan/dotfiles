@@ -1,0 +1,5 @@
+@import "theme"
+
+configuration {
+  drun-show-actions: true;
+}

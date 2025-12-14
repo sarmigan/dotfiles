@@ -1,0 +1,21 @@
+{
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": [],
+  "modules-right": ["tray", "wireplumber", "clock"],
+  "hyprland/workspaces": {
+    "format": "{name}"
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "wireplumber": {
+    "format": " {volume}%",
+    "on-click": "pavucontrol",
+    "tooltip": false
+  },
+  "clock": {
+    "format": "{:>%H:%M:%S}",
+    "interval": 1,
+    "tooltip": false 
+  }
+}
