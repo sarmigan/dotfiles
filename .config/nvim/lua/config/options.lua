@@ -25,3 +25,5 @@ vim.o.incsearch = true
 
 vim.o.wrap = false
 vim.o.completeopt = "menuone,noselect"
+
+vim.o.swapfile = false

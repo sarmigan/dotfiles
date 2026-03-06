@@ -1,19 +1,30 @@
 {
-  "modules-left": ["hyprland/workspaces"],
+  "layer": "top",
+  "position": "top",
+  "modules-left": [ "custom/rofi", "niri/workspaces"],
   "modules-center": [],
-  "modules-right": ["tray", "wireplumber", "clock"],
-  "hyprland/workspaces": {
-    "format": "{name}"
+  "modules-right": ["tray", "wireplumber", "clock#date", "clock#time"],
+  "custom/rofi": {
+    "format" : "",
+    "tooltip": false,
+    "on-click": "rofi -show drun -display-drun ''"
+  },
+  "niri/workspaces": {
+    "format": "{value}"
   },
   "tray": {
     "spacing": 10
   },
   "wireplumber": {
-    "format": " {volume}%",
-    "on-click": "pavucontrol",
+    "format": " {volume}%",
     "tooltip": false
   },
-  "clock": {
+  "clock#date": {
+    "format": "{:>%a %d/%m/%Y}",
+    "interval": 1,
+    "tooltip": false 
+  },
+  "clock#time": {
     "format": "{:>%H:%M:%S}",
     "interval": 1,
     "tooltip": false 
