@@ -5,10 +5,10 @@
 * {
     font: "JetBrains Mono NL 12";
 
-    background:                  rgba ( 19, 19, 19, 100 % );
+    background:                  rgba ( 31, 31, 31, 100 % );
     foreground:                  rgba ( 255, 255, 255, 100 % );
 
-    lightbg:                     rgba ( 19, 19, 19, 100 % );
+    lightbg:                     rgba ( 31, 31, 31, 100 % );
     lightfg:                     rgba ( 255, 255, 255, 100 % );
 
     red:                         rgba ( 220, 50, 47, 100 % );
@@ -96,7 +96,7 @@ window {
     padding:          5;
     background-color: var(background);
     border:           1;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 mainbox {
     padding: 0;

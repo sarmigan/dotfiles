@@ -3,14 +3,19 @@
   "position": "top",
   "modules-left": [ "custom/rofi", "niri/workspaces"],
   "modules-center": [],
-  "modules-right": ["tray", "wireplumber", "clock#date", "clock#time"],
+  "modules-right": ["tray", "wireplumber", "battery", "clock"],
   "custom/rofi": {
     "format" : "",
     "tooltip": false,
     "on-click": "rofi -show drun -display-drun ''"
   },
   "niri/workspaces": {
-    "format": "{value}"
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "focused": "",
+      "active": ""
+    }
   },
   "tray": {
     "spacing": 10
@@ -19,14 +24,12 @@
     "format": " {volume}%",
     "tooltip": false
   },
-  "clock#date": {
-    "format": "{:>%a %d/%m/%Y}",
-    "interval": 1,
-    "tooltip": false 
+  "battery": {
+    "format": "󰁹 {capacity}%"
   },
-  "clock#time": {
-    "format": "{:>%H:%M:%S}",
+  "clock": {
     "interval": 1,
-    "tooltip": false 
+    "format": "{:%a %d/%m/%Y • %H:%M:%S}",
+    "tooltip": false
   }
 }

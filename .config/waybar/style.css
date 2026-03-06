@@ -1,7 +1,13 @@
+@define-color bg1 rgba(31, 31, 31, 1);
+@define-color bg2 rgba(51, 51, 51, 1);
+@define-color bg3 rgba(101, 101, 101, 1);
+
+@define-color fg rgba(255, 255, 255, 1);
+
 * {
-  font-family: "JetBrains Mono NL", "Symbols Nerd Font";
+  font-family: "Noto Serif Mono", "Symbols Nerd Font";
   font-size: 14px;
-  color: rgba(255, 255, 255, 1);
+  color: @fg;
 }
 
 window#waybar {
@@ -14,18 +20,21 @@ window#waybar {
 .modules-left,
 .modules-right {
   margin: 2px 4px;
-  padding: 0px;
-  background: rgba(31, 31, 31, 1);
-  border-radius: 5px;
+  padding: 2px 4px;
+  background: @bg1;
+  border-radius: 10px;
 }
 
 #workspaces,
 #wireplumber,
+#battery,
 #clock,
 #tray,
 #custom-rofi {
+  background: @bg2;
+  border-radius: 10px;
   padding: 0px 10px;
-  margin: 2px 2px 0px 2px;
+  margin: 6px 4px 6px 4px;
 }
 
 #workspaces {
@@ -33,7 +42,7 @@ window#waybar {
 }
 
 #workspaces button {
-  border-radius: 0px;
+  border-radius: 10px;
   border: none;
   text-shadow: none;
   box-shadow: none;
@@ -41,16 +50,22 @@ window#waybar {
   -gtk-icon-shadow: none;
   -gtk-icon-effect: none;
   min-width: 0px;
-  color: rgba(255, 255, 255, 1);
+
+  color: @fg;
   opacity: 0.25;
   transition: all .2s ease;
 }
 
-#workspaces button.active {
+#workspaces button.active, button.focused {
+  background: @bg3;
   opacity: 1;
   color: rgba(19, 19, 19, 1);
 }
 
 #workspaces button:hover {
   opacity: 1;
+}
+
+#custom-rofi:hover {
+  background: @bg3;
 }
