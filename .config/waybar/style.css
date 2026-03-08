@@ -7,25 +7,24 @@
 * {
   font-family: "Noto Serif Mono", "Symbols Nerd Font";
   font-size: 14px;
+  font-weight: 400;
   color: @fg;
 }
 
 window#waybar {
   background: none;
-  padding: 0px;
-  margin: 0px;
-  border-radius: 0px;
 }
 
 .modules-left,
-.modules-right {
-  margin: 2px 4px;
-  padding: 2px 4px;
-  background: @bg1;
-  border-radius: 10px;
+.modules-right,
+.modules-center {
+  margin: 0px 12px;
+  padding: 0px;
+  background: none;
 }
 
 #workspaces,
+#window,
 #wireplumber,
 #battery,
 #clock,
@@ -33,12 +32,22 @@ window#waybar {
 #custom-rofi {
   background: @bg2;
   border-radius: 10px;
-  padding: 0px 10px;
-  margin: 6px 4px 6px 4px;
+  margin: 12px 8px 2px 8px;
+  padding: 4px 10px;
+
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
 }
 
 #workspaces {
   padding: 0px;
+}
+
+window#waybar.empty #window {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  box-shadow: none;
+  background: transparent;
 }
 
 #workspaces button {
@@ -68,4 +77,5 @@ window#waybar {
 
 #custom-rofi:hover {
   background: @bg3;
+  transition: all .2s ease;
 }

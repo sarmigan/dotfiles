@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
   "modules-left": [ "custom/rofi", "niri/workspaces"],
-  "modules-center": [],
+  "modules-center": ["niri/window"],
   "modules-right": ["tray", "wireplumber", "battery", "clock"],
   "custom/rofi": {
     "format" : "",

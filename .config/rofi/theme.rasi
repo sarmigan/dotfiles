@@ -3,7 +3,7 @@
  * Rofi version: 1.7.9+wayland1
  **/
 * {
-    font: "JetBrains Mono NL 12";
+    font: "Noto Serif Mono 12";
 
     background:                  rgba ( 31, 31, 31, 100 % );
     foreground:                  rgba ( 255, 255, 255, 100 % );
@@ -19,7 +19,7 @@
     urgent-foreground:           var(red);
     alternate-urgent-background: var(lightbg);
     background-color:            transparent;
-    border-color:                var(foreground);
+    border-color:                rgba ( 80, 80, 80, 80 % );
     normal-background:           var(background);
     selected-urgent-background:  var(red);
     alternate-active-background: var(lightbg);
@@ -93,10 +93,10 @@ element-icon {
     text-color:       inherit;
 }
 window {
-    padding:          5;
+    padding:          10;
     background-color: var(background);
     border:           1;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 mainbox {
     padding: 0;
