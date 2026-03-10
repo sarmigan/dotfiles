@@ -27,3 +27,6 @@ export PATH=${PATH}:/usr/local/llama.cpp/bin
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib64
 
 alias venv="source .venv/bin/activate"
+
+eval "$(starship init bash)"
+export STARSHIP_CONFIG=~/.config/starship/starship.toml

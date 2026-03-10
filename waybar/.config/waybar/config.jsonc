@@ -17,6 +17,10 @@
       "active": ""
     }
   },
+  "niri/window" : {
+    "separate-outputs": true,
+    "max-length": 30
+  },
   "tray": {
     "spacing": 10
   },

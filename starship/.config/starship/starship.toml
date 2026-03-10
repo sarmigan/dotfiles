@@ -19,8 +19,8 @@ style = "bold #00CFFF"
 
 [directory]
 style = 'bold #FF6B00'
-truncation_symbol = '.../' 
-format = ' | [$path]($style)[$read_only]($read_only_style)'
+truncation_symbol = '... /' 
+format = ' | [$path]($style)'
 
 [git_branch]
 style = 'bold #BF00FF'
