@@ -1,17 +1,19 @@
 sort=-time
-layer=overlay
-background-color=#181818
+layer=top
+background-color=#1e1e1f
 width=300
 height=110
-border-size=2
+border-size=0
 border-color=#505050
-border-radius=11
+border-radius=10
 icons=1
 max-icon-size=64
 default-timeout=5000
-font=JetBrains Mono 11
-outer-margin=5,3
+font=Noto Serif Mono 11
+outer-margin=16
+margin=16,0,0,0
 text-color=#f8f8f8
+anchor=bottom-right
 
 [urgency=low]
 border-color=#505050
