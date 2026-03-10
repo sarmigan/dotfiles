@@ -1,3 +1,4 @@
-timeout 300 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'
+timeout 300 'niri msg action power-off-monitors' resume 'niri msg action power-on-monitors'
 timeout 1800 'systemctl suspend' 
-after-resume 'hyprctl dispatch dpms on'
+after-resume 'niri msg action power-on-monitors'
+before-sleep 'hyprlock'
