@@ -3,7 +3,10 @@
 
 {
     "logo": {
-      "source": "~/.config/fastfetch/snorlax"
+      "source": "~/.config/fastfetch/snorlax",
+      "padding": {
+        "top": 1
+      }
     }, 
     "display": {
         "separator": " "

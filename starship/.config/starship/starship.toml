@@ -17,7 +17,7 @@ format = ' | [$hostname]($style)'
 style = "bold #7DF9FF"
 
 [directory]
-style = 'bold #7DF9FF'
+style = 'bold #FF5F00'
 truncation_symbol = '... /' 
 format = ' | [$path]($style)'
 
