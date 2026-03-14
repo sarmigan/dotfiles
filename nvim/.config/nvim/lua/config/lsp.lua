@@ -40,6 +40,10 @@ mason_registry.update(function()
     if not mason_registry.is_installed("tailwindcss-language-server") then
         mason_registry.get_package("tailwindcss-language-server"):install()
     end
+
+    if not mason_registry.is_installed("terraform-ls") then
+        mason_registry.get_package("terraform-ls"):install()
+    end
 end)
 
 vim.lsp.enable("clangd")
@@ -52,6 +56,7 @@ vim.lsp.enable("html")
 vim.lsp.enable("vtsls")
 vim.lsp.enable("jsonls")
 vim.lsp.enable("tailwindcss")
+vim.lsp.enable("terraformls")
 
 vim.lsp.config("lua_ls", {
     settings = {

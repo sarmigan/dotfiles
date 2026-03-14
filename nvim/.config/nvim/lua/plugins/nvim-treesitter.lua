@@ -19,7 +19,8 @@ return {
                 "javascript",
                 "json",
                 "tsx",
-                "typescript"
+                "typescript",
+                "terraform"
             },
             highlight = {
                 enable = true,
