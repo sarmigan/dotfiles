@@ -30,3 +30,6 @@ alias venv="source .venv/bin/activate"
 
 eval "$(starship init bash)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
+
+complete -C /usr/local/bin/terraform terraform
+complete -C /usr/local/bin/aws_completer aws
