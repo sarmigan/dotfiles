@@ -1,4 +1,0 @@
-timeout 300 'niri msg action power-off-monitors' resume 'niri msg action power-on-monitors'
-timeout 1800 'systemctl suspend' 
-after-resume 'niri msg action power-on-monitors'
-before-sleep 'hyprlock'
