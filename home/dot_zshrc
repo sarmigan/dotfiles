@@ -1,3 +1,6 @@
+# Kiro CLI pre block. Keep at the top of this file.
+[[ -f "${HOME}/.local/share/kiro-cli/shell/bashrc.pre.bash" ]] && builtin source "${HOME}/.local/share/kiro-cli/shell/bashrc.pre.bash"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -126,7 +129,7 @@ export LESS_TERMCAP_me="$(tput sgr0 2> /dev/null)"
 
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
-export EDITOR="nvim"
+command -v nvim >/dev/null 2>&1 && export EDITOR="nvim"
 
 tmux() {
     case "$1" in
@@ -181,3 +184,11 @@ export NVM_DIR="$HOME/.nvm"
 . "$HOME/.local/bin/env"
 
 export PATH="$HOME/.config/tmux/plugins/tmuxifier/bin:$PATH"
+
+if [[ -x /usr/local/bin/aws_completer ]]; then
+    [[ ":$PATH:" == *":/usr/local/bin:"* ]] || export PATH="$PATH:/usr/local/bin"
+    complete -C '/usr/local/bin/aws_completer' aws
+fi
+
+# Kiro CLI post block. Keep at the bottom of this file.
+[[ -f "${HOME}/.local/share/kiro-cli/shell/bashrc.post.bash" ]] && builtin source "${HOME}/.local/share/kiro-cli/shell/bashrc.post.bash"
