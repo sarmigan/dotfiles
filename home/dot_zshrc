@@ -159,7 +159,7 @@ tmuxs() {
     print -u2 "usage: tmuxs <template> [session-name]"
     print -u2 "       session-name defaults to current directory name"
     print -u2 "templates:"
-    local dir="${TMUXIFIER_LAYOUT_PATH:-$HOME/.tmuxifier/layouts}"
+    local dir="${TMUXIFIER_LAYOUT_PATH:-$HOME/.config/tmux/plugins/tmuxifier/layouts}"
     local -a layouts=("$dir"/*.session.sh)
     if (( ${#layouts} == 0 )); then
       print -u2 "  (no layouts found in $dir)"
