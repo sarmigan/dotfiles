@@ -1,6 +1,8 @@
+{{- if stat (joinPath .chezmoi.homeDir ".local/share/kiro-cli/shell/bashrc.pre.bash") }}
 # Kiro CLI pre block. Keep at the top of this file.
-[[ -f "${HOME}/.local/share/kiro-cli/shell/bashrc.pre.bash" ]] && builtin source "${HOME}/.local/share/kiro-cli/shell/bashrc.pre.bash"
+builtin source "${HOME}/.local/share/kiro-cli/shell/bashrc.pre.bash"
 
+{{ end -}}
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -177,18 +179,21 @@ tmuxs() {
   SESSION_NAME="$session" PROJECT_DIR="$PWD" tmuxifier load-session "$1"
 }
 
+{{ if stat "/snap/bin" -}}
+export PATH="/snap/bin:$PATH"
+
+{{ end -}}
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH="$HOME/.config/tmux/plugins/tmuxifier/bin:$PATH"
 
-if [[ -x /usr/local/bin/aws_completer ]]; then
-    [[ ":$PATH:" == *":/usr/local/bin:"* ]] || export PATH="$PATH:/usr/local/bin"
-    complete -C '/usr/local/bin/aws_completer' aws
-fi
+{{ if stat "/usr/local/bin/aws_completer" -}}
+complete -C '/usr/local/bin/aws_completer' aws
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
+{{ end -}}
+{{ if stat (joinPath .chezmoi.homeDir ".local/share/kiro-cli/shell/bashrc.post.bash") }}
 # Kiro CLI post block. Keep at the bottom of this file.
-[[ -f "${HOME}/.local/share/kiro-cli/shell/bashrc.post.bash" ]] && builtin source "${HOME}/.local/share/kiro-cli/shell/bashrc.post.bash"
+builtin source "${HOME}/.local/share/kiro-cli/shell/bashrc.post.bash"
+{{ end -}}
