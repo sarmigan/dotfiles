@@ -2,7 +2,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.diagnostic.config({
-    virtual_lines = false,
+  virtual_lines = false,
 })
 
 vim.o.termguicolors = true
