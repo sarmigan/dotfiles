@@ -54,6 +54,26 @@ mason_registry.update(function()
   end
 end)
 
+vim.lsp.config("lua_ls", {
+  settings = {
+    Lua = {
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("", true),
+      }
+    }
+  }
+})
+
+vim.lsp.config("pyright", {
+  settings = {
+    python = {
+      analysis = {
+        typeCheckingMode = "strict",
+      },
+    },
+  },
+})
+
 vim.lsp.enable("clangd")
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("vimls")
@@ -65,16 +85,6 @@ vim.lsp.enable("vtsls")
 vim.lsp.enable("jsonls")
 vim.lsp.enable("tailwindcss")
 vim.lsp.enable("terraformls")
-
-vim.lsp.config("lua_ls", {
-  settings = {
-    Lua = {
-      workspace = {
-        library = vim.api.nvim_get_runtime_file("", true),
-      }
-    }
-  }
-})
 
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*",

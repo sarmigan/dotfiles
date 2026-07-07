@@ -6,7 +6,7 @@ return {
       require("conform").setup({
         formatters_by_ft = {
           lua = { lsp_format = "fallback" },
-          python = { "ruff" },
+          python = { "ruff_format" },
           typescript = { "prettierd" },
         },
       })
